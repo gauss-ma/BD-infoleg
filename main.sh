@@ -1,5 +1,8 @@
 #!/bin/bash
-
+#
+# Dependencias: curl, unzip, grep, awk, sed
+#
+#
 
 ## D E S C A R G A ----------------------------------------------------------------#
 
@@ -26,10 +29,10 @@ done;
 
 zips=($(ls *.zip))
 
-for zip in ${zips[@]}
+for zipfile in ${zips[@]}
 do
-	echo -e "Descomprimiendo: \e[34m $zip \e[0m"
-	unzip $zip -d nacional/
+	echo -e "Descomprimiendo: \e[34m $zipfile \e[0m"
+	unzip $zipfile -d nacional/
 done;
 
 
@@ -44,10 +47,16 @@ done;
 #5 organismo_origen	#10 titulo_resumido	#15texto_actualizado
 
 
+#Columnas (Provincial)
+#1 provincia_nombre	#5 fecha		#9  titulo_sumario
+#2 tipo_norma"      	#6 fecha_publicacion    #10 informacion_digesto
+#3 numero_norma     	#7 nombre_norma         #11 texto_actualizado
+#4 estado_vigencia  	#8 titulo_resumido      #12 provincia_id
+
+
+
 #ideas para filtrar:
 awk -F "\"*,\"*" '$6 ~ /2020-01-27/{print $6}' nacional/base-infoleg-normativa-nacional.csv
-
-
 
 
 
