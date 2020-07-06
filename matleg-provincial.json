@@ -1,0 +1,512 @@
+provincial=[
+   {
+     "provincia":"BUENOS AIRES",
+     "tipo_norma":"LEY",
+     "estado":"Vigente",
+     "id":"LEY:14472-13",
+     "nombre_norma":"LEY 14.472",
+     "titulo_resumido":"INCORPORAR AL PIE DE TODOS LOS CORREOS ELECTRONICOS OFICIALES LA FRASE PIENSE ANTES DE IMPRIMIR. AHORRAR PAPEL ES CUIDAR EL MEDIO AMBIENTE'",
+     "titulo_sumario":"CORREO ELECTRONICO-LEYENDA EN PAPELERIA OFICIAL-MEDIO AMBIENTE",
+     "texto_actualzado":"www.saij.gob.ar/LPB0014472"
+   },
+   {
+     "provincia":"BUENOS AIRES",
+     "tipo_norma":"LEY",
+     "estado":"Vigente",
+     "id":"LEY:13639-07",
+     "nombre_norma":"LEY 13.639",
+     "titulo_resumido":"APROBACION DEL ACTA CONSTITUTIVA DEL CONSEJO FEDERAL DEL MEDIO AMBIENTE.",
+     "titulo_sumario":"CONSEJO FEDERAL DE MEDIO AMBIENTE",
+     "texto_actualzado":"www.saij.gob.ar/LPB0013639"
+   },
+   {
+     "provincia":"BUENOS AIRES",
+     "tipo_norma":"LEY",
+     "estado":"Vigente",
+     "id":"LEY:12843-02",
+     "nombre_norma":"LEY 12.843",
+     "titulo_resumido":"INSTITUCION DEL PREMIO PROVINCIA DE BUENOS AIRES OLIMPIADA ESTUDIANTIL DEL MEDIO AMBIENTE",
+     "titulo_sumario":"PREMIOS-CULTURA Y EDUCACION-MEDIO AMBIENTE",
+     "texto_actualzado":"www.saij.gob.ar/LPB0012843"
+   },
+   {
+     "provincia":"BUENOS AIRES",
+     "tipo_norma":"LEY",
+     "estado":"Vigente",
+     "id":"LEY:12725-01",
+     "nombre_norma":"LEY 12.725",
+     "titulo_resumido":"CONMEMORACIÓN DEL DÍA MUNDIAL DEL MEDIO AMBIENTE",
+     "titulo_sumario":"DERECHO AMBIENTAL-CONMEMORACIONES",
+     "texto_actualzado":"www.saij.gob.ar/LPB0012725"
+   },
+   {
+     "provincia":"BUENOS AIRES",
+     "tipo_norma":"LEY",
+     "estado":"Vigente",
+     "id":"LEY:11723-95",
+     "nombre_norma":"LEY 11.723",
+     "titulo_resumido":"LEY DE PROTECCION DEL MEDIO AMBIENTE Y RECURSOS NATURALES",
+     "titulo_sumario":"RECURSOS NATURALES DERECHO AMBIENTAL IMPACTO AMBIENTAL EDUCACION AMBIENTAL POLITICA AMBIENTAL",
+     "texto_actualzado":"www.saij.gob.ar/LPB0011723"
+   },
+   {
+     "provincia":"BUENOS AIRES",
+     "tipo_norma":"LEY",
+     "estado":"Vigente",
+     "id":"LEY:11469-93",
+     "nombre_norma":"LEY 11.469",
+     "titulo_resumido":"CREACION DEL INSTITUTO PROVINCIAL DEL MEDIO AMBIENTE.",
+     "titulo_sumario":"DERECHO AMBIENTAL-DERECHO A UN MEDIO AMBIENTE SANO-POLITICA AMBIENTAL-IMPACTO AMBIENTAL-INFORMACION AMBIENTAL-EDUCACION AMBIENTAL",
+     "texto_actualzado":"www.saij.gob.ar/LPB0011469"
+   },
+   {
+     "provincia":"CATAMARCA",
+     "tipo_norma":"LEY",
+     "estado":"Vigente",
+     "id":"LEY:4720-92",
+     "nombre_norma":"Ley 4720",
+     "titulo_resumido":"APRUEBA ACTA CONTITUTIVA Y CREACION DEL CONSEJO FEDERAL DE MEDIO AMBIENTE (COFEMA)",
+     "titulo_sumario":"DERECHO AMBIENTAL-PROTECCION DEL MEDIO AMBIENTE-CONSEJO FEDERAL DE MEDIO AMBIENTE-ACTA CONSTITUTIVA",
+     "texto_actualzado":"www.saij.gob.ar/LPK0004720"
+   },
+   {
+     "provincia":"CATAMARCA",
+     "tipo_norma":"DLE",
+     "estado":"Individual, Solo Modificatoria o Sin Eficacia",
+     "id":"DLE:4051-83",
+     "nombre_norma":"Decreto_Ley 4051",
+     "titulo_resumido":"CONVENIO CELEBRADO ENTRE EL MINISTERIO DE SALUD PUBLICA Y MEDIO AMBIENTE DE LA NACION Y GOBIERNO DE CATAMARCA",
+     "titulo_sumario":"OBJETO CUMPLIDO-SALUD PUBLICA-CONVENIOS CON LA NACION-GOBIERNO PROVINCIAL-CONSTRUCCIONES SANITARIAS-CONVENIO CELEBRADO ENTRE EL MINISTERIO DE SALUD PUBLICA Y MEDIO AMBIENTE DE LA NACION Y GOBIERNO DE CATAMARCA",
+     "texto_actualzado":"www.saij.gob.ar/LPK0004051"
+   },
+   {
+     "provincia":"CATAMARCA",
+     "tipo_norma":"DLE",
+     "estado":"Individual, Solo Modificatoria o Sin Eficacia",
+     "id":"DLE:4052-83",
+     "nombre_norma":"Decreto_Ley 4052",
+     "titulo_resumido":"CONVENIO CELEBRADO CON EL MINISTERIO DE SALUD PUBLICA Y MEDIO AMBIENTE DE LA NACION - PARTICIPACION TECNICO - FINANCIERA -",
+     "titulo_sumario":"OBJETO CUMPLIDO-SALUD PUBLICA-CONVENIO CON ORGANISMOS NACIONALES-CONVENIO CELEBRADO CON EL MINISTERIO DE SALUD PUBLICA Y MEDIO AMBIENTE DE LA NACION-PARTICIPACION TECNICO-FINANCIERA",
+     "texto_actualzado":"www.saij.gob.ar/LPK0004052"
+   },
+   {
+     "provincia":"CATAMARCA",
+     "tipo_norma":"DLE",
+     "estado":"Individual, Solo Modificatoria o Sin Eficacia",
+     "id":"DLE:3986-83",
+     "nombre_norma":"Decreto-Ley 3986",
+     "titulo_resumido":"CONVENIOS ENTRE EL GOBIERNO DE CATAMARCA Y MINISTERIO DE SALUD PUBLICA Y MEDIO AMBIENTE DE LA NACION.",
+     "titulo_sumario":"OBJETO CUMPLIDO-SALUD PUBLICA-HOSPITALES PUBLICOS-CONVENIO INTERJURISDICCIONAL-OBRAS PUBLICAS-HOSPITAL DE ICAÑO, POMAN Y ALIJILAN-CONSTRUCCION DE CAMINO-CONVENIO ENTRE GOBIERNO CATAMARCA Y MINISTERIO DE SALUD PUBLICA Y MEDIO AMBIENTE DE LA NACION",
+     "texto_actualzado":"www.saij.gob.ar/LPK0003986"
+   },
+   {
+     "provincia":"CATAMARCA",
+     "tipo_norma":"DLE",
+     "estado":"Individual, Solo Modificatoria o Sin Eficacia",
+     "id":"DLE:3987-83",
+     "nombre_norma":"Decreto-Ley 3987",
+     "titulo_resumido":"CONVENIO ENTRE GOBIERNO CATAMARCA Y MINISTERIO DE SALUD PUBLICA Y MEDIO AMBIENTE DE LA NACION",
+     "titulo_sumario":"OBJETO CUMPLIDO-SALUD PUBLICA-HOSPITAL DE ALIJILAN-CONVENIO INTERJURISDICCIONAL-OBRA PUBLICA-CONSTRUCCION DE CAMINO-CONVENIO ENTRE GOBIERNO CATAMARCA Y MINISTERIO DE SALUD PUBLICA Y MEDIO AMBIENTE DE LA NACION",
+     "texto_actualzado":"www.saij.gob.ar/LPK0003987"
+   },
+   {
+     "provincia":"CATAMARCA",
+     "tipo_norma":"DLE",
+     "estado":"Individual, Solo Modificatoria o Sin Eficacia",
+     "id":"DLE:3988-83",
+     "nombre_norma":"Decreto-Ley 3988",
+     "titulo_resumido":"CONVENIO CELEBRADO ENTRE GOBIERNO DE CATAMARCA Y MINISTERIO DE SALUD PUBLICA Y MEDIO AMBIENTE DE LA NACION",
+     "titulo_sumario":"OBJETO CUMPLIDO-SALUD PUBLICA-HOSPITAL DE VILISMAN-CONVENIO INTERJURISDICCIONAL-OBRA PUBLICA-CONSTRUCCION DE CAMINO-CONVENIO CELEBRADO ENTRE GOBIERNO DE CATAMARCA Y MINISTERIO DE SALUD PUBLICA Y MEDIO AMBIENTE DE LA NACION",
+     "texto_actualzado":"www.saij.gob.ar/LPK0003988"
+   },
+   {
+     "provincia":"CHUBUT",
+     "tipo_norma":"LEY",
+     "estado":"Vigente",
+     "id":"LEY:40-10",
+     "nombre_norma":"LEY XI N§ 40",
+     "titulo_resumido":"APRUEBA CONVENIO CELEBRADO ENTRE LA PROVINCIA DEL CHUBUT Y LA CÁMARA EMPRESARIA DE MEDIO AMBIENTE.",
+     "titulo_sumario":"DERECHO AMBIENTAL-CONVENIOS DE COOPERACION-DESARROLLO SUSTENTABLE-POLITICA AMBIENTAL-CONTROL AMBIENTAL",
+     "texto_actualzado":"www.saij.gob.ar/LPU1100040"
+   },
+   {
+     "provincia":"CHUBUT",
+     "tipo_norma":"LEY",
+     "estado":"Vigente",
+     "id":"LEY:34-10",
+     "nombre_norma":"LEY XI N§ 34 (Antes Ley 5420)",
+     "titulo_resumido":"ADHESION PROVINCIAL AL ACTA CONSTITUTIVA DEL CONSEJO FEDERAL DEL MEDIO AMBIENTE.",
+     "titulo_sumario":"DERECHO AMBIENTAL-ADHESION PROVINCIAL-LEY NACIONAL-CONSEJO FEDERAL DE MEDIO AMBIENTE",
+     "texto_actualzado":"www.saij.gob.ar/LPU1100034"
+   },
+   {
+     "provincia":"CHUBUT",
+     "tipo_norma":"LEY",
+     "estado":"Vigente",
+     "id":"LEY:52-10",
+     "nombre_norma":"LEY II - N§ 52 (Antes Ley 4745)",
+     "titulo_resumido":"APRUEBA EL CONVENIO SUSCRIPTO ENTRE LA SECRETARÍA DE DESARROLLO SOCIAL DEL MINISTERIO DE DESARROLLO SOCIAL Y MEDIO AMBIENTE DE LA NACION.",
+     "titulo_sumario":"BIENESTAR SOCIAL-POLITICAS SOCIALES-CONVENIOS CON LA NACION-DESARROLLO SOCIAL",
+     "texto_actualzado":"www.saij.gob.ar/LPU0200052"
+   },
+   {
+     "provincia":"CORDOBA",
+     "tipo_norma":"LEY",
+     "estado":"Vigente",
+     "id":"LEY:8366-94",
+     "nombre_norma":"Ley N. 8.366",
+     "titulo_resumido":"CREACION DE LAS CARRERAS DE NIVEL TERCIARIO CON ORIENTACION EN MEDIO AMBIENTE.",
+     "titulo_sumario":"EDUCACION-MEDIO AMBIENTE-CREACION DE CARRERAS DE NIVEL TERCIARIO- MINISTERIO DE EDUCACION",
+     "texto_actualzado":"www.saij.gob.ar/LPO0008366"
+   },
+   {
+     "provincia":"CORDOBA",
+     "tipo_norma":"LEY",
+     "estado":"Vigente",
+     "id":"LEY:7682-88",
+     "nombre_norma":"LEY 7682",
+     "titulo_resumido":"ORDENAMIENTO DE LEGISLACION DE MEDIO AMBIENTE Y RECURSOS NATURALES",
+     "titulo_sumario":"MEDIO AMBIENTE-RECURSOS NATURALES-LEGISLACION:ORDENAMIENTO",
+     "texto_actualzado":"www.saij.gob.ar/LPO0007682"
+   },
+   {
+     "provincia":"RIO NEGRO",
+     "tipo_norma":"LEY",
+     "estado":"Vigente",
+     "id":"LEY:4741-12",
+     "nombre_norma":"LEY M 4.741",
+     "titulo_resumido":"M - SECRETARIA DE MEDIO AMBIENTE. PODER DE POLICIA AMBIENTAL",
+     "titulo_sumario":"CREA LA SECRETARÍA DE MEDIO AMBIENTE-DISUELVE EL CONSEJO PROVINCIAL DE ECOLOGÍA Y MEDIO AMBIENTE-",
+     "texto_actualzado":"www.saij.gob.ar/LPR1004741"
+   },
+   {
+     "provincia":"RIO NEGRO",
+     "tipo_norma":"LEY",
+     "estado":"Vigente",
+     "id":"LEY:2615-08",
+     "nombre_norma":"LEY M 2.615",
+     "titulo_resumido":"M - ADHESION AL CONSEJO FEDERAL DEL MEDIO AMBIENTE",
+     "titulo_sumario":"RECURSOS NATURALES-MEDIO AMBIENTE-CONSEJO FEDERAL DEL MEDIO AMBIENTE COFEMA-ADHESION",
+     "texto_actualzado":"www.saij.gob.ar/LPR2002615"
+   },
+   {
+     "provincia":"RIO NEGRO",
+     "tipo_norma":"LEY",
+     "estado":"Vigente",
+     "id":"LEY:2612-08",
+     "nombre_norma":"LEY E 2.612",
+     "titulo_resumido":"E - PRESERVACION DEL MEDIO AMBIENTE",
+     "titulo_sumario":"RECURSOS NATURALES-CONTAMINACION-CONDICIONES AMBIENTALES- HIGIENE DEL TRABAJO-EMPRESAS: MEJORAMIENTO- PRESERVACION-INVERSIONES: FOMENTO- DESARROLLO-DIFERIMIENTO-ACTIVIDADES COMPRENDIDAS- IMPUESTOS-INFRACCION: SANCION-ADHESION-AUTORIDAD DE APLICACION",
+     "texto_actualzado":"www.saij.gob.ar/LPR2002612"
+   },
+   {
+     "provincia":"RIO NEGRO",
+     "tipo_norma":"LEY",
+     "estado":"Individual, Solo Modificatoria o Sin Eficacia",
+     "id":"LEY:3896-05",
+     "nombre_norma":"LEY 3.896",
+     "titulo_resumido":"CONSEJO DE ECOLOGIA Y MEDIO AMBIENTE-AUTORIZACION PARA PERMISOS PRECARIOS DE OCUPACION EN AREAS NATURALES PROTEGIDAS",
+     "titulo_sumario":"CONSEJO DE ECOLOGIA Y MEDIO AMBIENTE-AREA NATURAL PROTEGIDA-PERMISO PRECARIO-OCUPACION-UNIDAD ECONOMICA DE EXPLOTACION-DIRECCION DE TIERRAS Y COLONIZACION-CESION-TRANSFERENCIA",
+     "texto_actualzado":"www.saij.gob.ar/LPR1003896"
+   },
+   {
+     "provincia":"RIO NEGRO",
+     "tipo_norma":"LEY",
+     "estado":"Derogada",
+     "id":"LEY:2351-90",
+     "nombre_norma":"LEY 2351",
+     "titulo_resumido":"COMISION MIXTA DE CONDICIONES DE TRABAJO Y MEDIO AMBIENTE",
+     "titulo_sumario":"POLITICA EDUCATIVA-COMISION MIXTA-SISTEMA EDUCATIVO RIONEGRINO- MEJORAS-REGIMEN LABORAL",
+     "texto_actualzado":"www.saij.gob.ar/LPR0002351"
+   },
+   {
+     "provincia":"RIO NEGRO",
+     "tipo_norma":"LEY",
+     "estado":"Derogada",
+     "id":"LEY:2342-90",
+     "nombre_norma":"LEY 2342",
+     "titulo_resumido":"RECURSOS NATURALES. MEDIO AMBIENTE. EFECTOS DEGRADATIVOS. DETERIORO ECOLOGICO",
+     "titulo_sumario":"RECURSOS NATURALES-DERECHO AMBIENTAL-EFECTOS DEGRADATIVOS-DETERIORO ECOLOGICO-PREVENCION-ACTIVIDADES DEGRADATIVAS-AUTORIZACION AMBIENTAL:MECANISMO-INFRACCIONES-SANCIONES-AUTORIDAD DE APLICACION -PROBLEMATICA AMBIENTAL:ESTUDIO Y ANALISIS-COMISION DE EVALUACION DE IMPACTO AMBIENTAL:CREACION,INTEGRACION,FUNCION-FONDOS PRESUPUESTARIOS.-",
+     "texto_actualzado":"www.saij.gob.ar/LPR0000481"
+   },
+   {
+     "provincia":"RIO NEGRO",
+     "tipo_norma":"LEY",
+     "estado":"Individual, Solo Modificatoria o Sin Eficacia",
+     "id":"LEY:1850-84",
+     "nombre_norma":"LEY 1.850",
+     "titulo_resumido":"RATIFICA CONVENIO ENTRE MINISTERIO DE SALUD PUBLICA Y MEDIO AMBIENTE DE LA NACION Y LA PROVINCIA DE RIO NEGRO.",
+     "titulo_sumario":"CONVENIO PROVINCIA DE RIO NEGRO-MINISTERIO SALUD PUBLICA-PROGRAMAS AMBIENTALES DE LA PROVINCIA DE RIO NEGRO",
+     "texto_actualzado":"www.saij.gob.ar/LPR0005693"
+   },
+   {
+     "provincia":"SALTA",
+     "tipo_norma":"LEY",
+     "estado":"Vigente",
+     "id":"LEY:7585-09",
+     "nombre_norma":"LEY 7.585",
+     "titulo_resumido":"MEDIO AMBIENTE-SUSPENSIÓN DESMONTES.",
+     "titulo_sumario":"MEDIO AMBIENTE-DISPONE DURANTE LA VIGENCIA DE LEY 26160 NO PODRAN EJECUTARSE DESMONTES LEY 7543.",
+     "texto_actualzado":"www.saij.gob.ar/LPA0007585"
+   },
+   {
+     "provincia":"SALTA",
+     "tipo_norma":"LEY",
+     "estado":"Derogada",
+     "id":"LEY:6986-98",
+     "nombre_norma":"*LEY 6.986",
+     "titulo_resumido":"LEY DE MEDIO AMBIENTE.",
+     "titulo_sumario":"DERECHO AMBIENTAL-MEDIO AMBIENTE-SISTEMA PROVINCIAL DE INFORMACION- CONSEJO PROVINCIAL DEL MEDIO AMBIENTE-IMPACTO AMBIENTAL-RECURSOS HIDRICOS-PROTECCION DE LA FLORA Y FAUNA SILVESTRE-PARQUES NATURALES- RESERVAS NATURALES-RECURSOS ENERGETICOS-POLICIA AMBIENTAL- FONDO PROVINCIAL DEL MEDIO AMBIENTE.",
+     "texto_actualzado":"www.saij.gob.ar/LPA0006986"
+   },
+   {
+     "provincia":"SALTA",
+     "tipo_norma":"LEY",
+     "estado":"Vigente",
+     "id":"LEY:6499-88",
+     "nombre_norma":"LEY 6499",
+     "titulo_resumido":"CONVENIO SOBRE EFECTOS DE LOS PRODUCTOS QUIMICOS EN EL HOMBRE Y EN EL MEDIO AMBIENTE.",
+     "titulo_sumario":"BIENESTAR SOCIAL. SEGURIDAD SOCIAL. PROTECCION DEL AMBIENTE HUMANO. ECOLOGIA. CONTAMINACION AMBIENTAL. CONVENIO SECRETARIA DE VIVIENDA Y ORDENAMIENTO AMBIENTAL Y PROVINCIA DE SALTA. OBJETO:ESTUDIO EFECTOS DE LOS PROYECTOS QUIMICOS EN EL HOMBRE Y EN EL MEDIO AMBIENTE.",
+     "texto_actualzado":"www.saij.gob.ar/LPA0006499"
+   },
+   {
+     "provincia":"SAN JUAN",
+     "tipo_norma":"LEY",
+     "estado":"Vigente",
+     "id":"LEY:1434-16",
+     "nombre_norma":"LEY 1434 - L",
+     "titulo_resumido":"SE CREAN NORMAS PARA PROTECCION AMBIENTAL PARA EL DESARROLLO DE CAUCHOS DE DESECHOS",
+     "titulo_sumario":"Se establecen normas de protección ambiental para el desarrollo de un Sistema Integral de Gestión de Cauchos de Desecho generados en la Provincia de San Juan",
+     "texto_actualzado":"www.saij.gob.ar/LPJ1201434"
+   },
+   {
+     "provincia":"SAN JUAN",
+     "tipo_norma":"LEY",
+     "estado":"Vigente",
+     "id":"LEY:7834-07",
+     "nombre_norma":"LEY 7.834",
+     "titulo_resumido":"FACULTA A LA SUBSECRETARIA DE MEDIO AMBIENTE A TRAVÉS DE FISCALIA DE ESTADO PARA EL COBRO DE TASAS AMBIENTALES Y MULTAS POR MORA.-",
+     "titulo_sumario":"DERECHO AMBIENTAL-POLITICA AMBIENTAL-INFORME AMBIENTAL-AUTORIDAD DE APLICACION-OBLIGACION TRIBUTARIA-EXTINCION DE LA OBLIGACION TRIBUTARIA-PAGO DE TRIBUTOS-PROCEDIMIENTO TRIBUTARIO",
+     "texto_actualzado":"www.saij.gob.ar/LPJ0007834"
+   },
+   {
+     "provincia":"SAN JUAN",
+     "tipo_norma":"LEY",
+     "estado":"",
+     "id":"LEY:7486-04",
+     "nombre_norma":"LEY N 7486",
+     "titulo_resumido":"DIA DEL MEDIO AMBIENTE",
+     "titulo_sumario":"OBJETO CUMPLIDO-INSTITUYE EN LA PROVINCIA EL DIA 5 DE JUNIO COMO DIA DEL MEDIO AMBIENTE-ORDENA LA DIFUSION A ORGANISMOS A CARGO DE CULTURA Y MEDIO AMBIENTE- INCLUSION DE ESTA FECHA EN AGENDA PUBLICA INSTITUCIONAL DEL GOBIERNO PROVINCIAL Y EN CALENDARIO ACADEMICO DEL MINISTERIO DE EDUCACION-INVITACION A LOS MUNICIPIOS PROVINCIALES PARA SU ADHESION",
+     "texto_actualzado":"www.saij.gob.ar/LPJ0007486"
+   },
+   {
+     "provincia":"SAN JUAN",
+     "tipo_norma":"LEY",
+     "estado":"",
+     "id":"LEY:7148-02",
+     "nombre_norma":"LEY N. 7148",
+     "titulo_resumido":"CONVENIO DESARROLLO SOCIAL Y MEDIO AMBIENTE",
+     "titulo_sumario":"OBJETO CUMPLIDO-APRUEBA CONVENIO ENTRE EL MINISTERIO DE DESARROLLO SOCIAL Y MEDIO AMBIENTE DE LA NACION Y EL GOBIERNO DE SAN JUAN,Y SUS ANEXOS I,II,III,IV,VI Y VII, RATIFICADO POR DECRETO N. 590-MS Y AS 29-05-01 (BO.25/06/01).",
+     "texto_actualzado":"www.saij.gob.ar/LPJ0007148"
+   },
+   {
+     "provincia":"SAN JUAN",
+     "tipo_norma":"LEY",
+     "estado":"",
+     "id":"LEY:6800-97",
+     "nombre_norma":"LEY N. 6800",
+     "titulo_resumido":"MEDIO AMBIENTE",
+     "titulo_sumario":"SOLO MODIFICATORIA-MODIFICA LEY N§ 6571 (B.O.03-01-95) EN SUS ARTS. 2, 4 Y 17-IMPACTO AMBIENTAL Y FONDO DE FOMENTO-SE FACULTA AL PODER EJECUTIVO A DICTAR LAS NORMAS COMPLEMENTARIAS CORRESPONDIENTES.",
+     "texto_actualzado":"www.saij.gob.ar/LPJ0006800"
+   },
+   {
+     "provincia":"SAN JUAN",
+     "tipo_norma":"LEY",
+     "estado":"",
+     "id":"LEY:6790-97",
+     "nombre_norma":"LEY 6790",
+     "titulo_resumido":"CONSERVACION Y PROTECCION DEL MEDIO AMBIENTE.",
+     "titulo_sumario":"DERECHO AMBIENTAL-PROTECCION DEL MEDIO AMBIENTE-DECLARACION DEL AÑO 1997 COMO AÑO PROVINCIAL DE CONSERVACION Y PROTECCION DEL AMBIENTE-FOMENTO, CONCIENTIZACION Y DEFENSA DEL AMBIENTE-MENCIONES ESPECIALES",
+     "texto_actualzado":"www.saij.gob.ar/LPJ0006790"
+   },
+   {
+     "provincia":"SAN JUAN",
+     "tipo_norma":"LEY",
+     "estado":"Vigente",
+     "id":"LEY:6634-95",
+     "nombre_norma":"LEY 6.634",
+     "titulo_resumido":"PROTECCION DEL MEDIO AMBIENTE",
+     "titulo_sumario":"DERECHO AMBIENTAL-MEDIO AMBIENTE-PRESERVACION DEL MEDIO AMBIENTE-POLITICA AMBIENTAL-EDUCACION AMBIENTAL-CONSEJO PROVINCIAL DEL AMBIENTE DE SAN JUAN",
+     "texto_actualzado":"www.saij.gob.ar/LPJ0006634"
+   },
+   {
+     "provincia":"SAN JUAN",
+     "tipo_norma":"LEY",
+     "estado":"",
+     "id":"LEY:6279-93",
+     "nombre_norma":"LEY N. 6279",
+     "titulo_resumido":"1993 AÑO PROVINCIAL DEL MEDIO AMBIENTE",
+     "titulo_sumario":"PLAZO CUMPLIDO-DECLARA AL AÑO 1993 'AÑO PROVINCIAL DEL MEDIO AMBIENTE' EN VIRTUD DE ACONTECIMIENTOS LLEVADOS A CABO EN EL AÑO 1992-LA CAMARA DE DIPUTADOS REALIZARA DURANTE EL AÑO 1993 ACTIVIDADES DE FOMENTO Y CONCIENTIZACION DEL MEDIO AMBIENTE, ENTREGANDO MENCIONES ESPECIALES EN SU ULTIMA SESION ORDINARIA A TRES MUNICIPALIDADES DE LA PROVINCIA,TRES INSTITUCIONES PRIVADAS,TRES DOCENTES Y AUTOR DE MONOGRAFIA SOBRE LA PROTECCION DEL MEDIO AMBIENTE-LA EVALUACION Y DETERMINACION DE PERSONAS E INSTITUCIONES MERECEDORAS DE MENCIONES ESPECIALES LA LLEVARA A CABO LA COMISION DE RECURSOS NATURALES Y AMBIENTE HUMANO DE LA CAMARA DE DIPUTADOS Y EL SUBSECRETARIO DE POLITICA AMBIENTAL DE LA PROVINCIA.",
+     "texto_actualzado":"www.saij.gob.ar/LPJ0006279"
+   },
+   {
+     "provincia":"SAN LUIS",
+     "tipo_norma":"LEY",
+     "estado":"Vigente",
+     "id":"LEY:749-10",
+     "nombre_norma":"LEY N. IX-0749-2010",
+     "titulo_resumido":"PLAN MAESTRO AMBIENTAL: TRATADO DE PAZ ENTRE PROGRESO Y MEDIO AMBIENTE - ESTRATEGIA 2010-2020.",
+     "titulo_sumario":"POLITICA AMBIENTAL-PROTECCION DEL MEDIO AMBIENTE- AUTORIDAD DE APLICACION-MINISTERIO DE MEDIO AMBIENTE",
+     "texto_actualzado":"www.saij.gob.ar/LPD1000749"
+   },
+   {
+     "provincia":"SAN LUIS",
+     "tipo_norma":"LEY",
+     "estado":"Individual, Solo Modificatoria o Sin Eficacia",
+     "id":"LEY:5660-04",
+     "nombre_norma":"LEY N. 5.660",
+     "titulo_resumido":"PACTO FEDERAL AMBIENTAL. ADHESION AL CONSEJO FEDERAL DEL MEDIO AMBIENTE (COFEMA)",
+     "titulo_sumario":"CONVENIOS CON LA NACION-MEDIO AMBIENTE-POLITICA AMBIENTAL-PROTECCION DEL MEDIO AMBIENTE-EDUCACION AMBIENTAL-CONSEJO FEDERAL DE MEDIO AMBIENTE-DAÑO AMBIENTAL",
+     "texto_actualzado":"www.saij.gob.ar/LPD0005660"
+   },
+   {
+     "provincia":"SAN LUIS",
+     "tipo_norma":"LEY",
+     "estado":"Vigente",
+     "id":"LEY:172-04",
+     "nombre_norma":"LEY N. VII-0172-2004 (5660)",
+     "titulo_resumido":"PACTO FEDERAL AMBIENTAL. ADHESION AL CONSEJO FEDERAL DEL MEDIO AMBIENTE (COFEMA)",
+     "titulo_sumario":"MEDIO AMBIENTE-POLITICA AMBIENTAL-PROTECCION DEL MEDIO AMBIENTE-EDUCACION AMBIENTAL-CONSEJO FEDERAL DE MEDIO AMBIENTE-DAÑO AMBIENTAL",
+     "texto_actualzado":"www.saij.gob.ar/LPD1000172"
+   },
+   {
+     "provincia":"SAN LUIS",
+     "tipo_norma":"LEY",
+     "estado":"Individual, Solo Modificatoria o Sin Eficacia",
+     "id":"LEY:5451-04",
+     "nombre_norma":"LEY N. 5451",
+     "titulo_resumido":"GASES DE COMBUSTION DEL TABACO. CONTAMINACION DEL MEDIO AMBIENTE. ADOPTA MEDIDAS EN ESTABLECIMIENTOS Y TRANSPORTES PUBLICOS",
+     "titulo_sumario":"DERECHO AMBIENTAL-PROTECCION DEL MEDIO AMBIENTE-CONTAMINACION-MEDIDAS PREVENTIVAS",
+     "texto_actualzado":"www.saij.gob.ar/LPD0005451"
+   },
+   {
+     "provincia":"SAN LUIS",
+     "tipo_norma":"LEY",
+     "estado":"Vigente",
+     "id":"LEY:326-04",
+     "nombre_norma":"LEY N. IX-0326-2004 (5451 R)",
+     "titulo_resumido":"GASES DE COMBUSTION DEL TABACO. CONTAMINACION DEL MEDIO AMBIENTE. ADOPTA MEDIDAS EN ESTABLECIMIENTOS Y TRANSPORTES PUBLICOS",
+     "titulo_sumario":"DERECHO AMBIENTAL-PROTECCION DEL MEDIO AMBIENTE-CONTAMINACION-MEDIDAS PREVENTIVAS",
+     "texto_actualzado":"www.saij.gob.ar/LPD1000326"
+   },
+   {
+     "provincia":"SAN LUIS",
+     "tipo_norma":"LEY",
+     "estado":"Derogada",
+     "id":"LEY:4300-82",
+     "nombre_norma":"Ley 4.300 de San Luis",
+     "titulo_resumido":"RATIFICA CONVENIO ENTRE EL MINISTERIO DE SALUD PUBLICA Y MEDIO AMBIENTE DE LA NACION Y EL GOBIERNO DE LA PROVINCIA DE SAN LUIS.",
+     "titulo_sumario":"RATIFICA CONVENIO ENTRE NACION Y PROVINCIA SOBRE PARTICIPACION TECNICO FINANCIERA EN LA EJECUCION DE OBRAS DE MANTENIMIENTO CORRECTIVO A REALIZARSE EN DIVERSOS ESTABLECIMIENTOS ASISTENCIALES UBICADOS EN LA PROVINCIA DE SAN LUIS.",
+     "texto_actualzado":"www.saij.gob.ar/LPD0004300"
+   },
+   {
+     "provincia":"SANTA CRUZ",
+     "tipo_norma":"LEY",
+     "estado":"Vigente",
+     "id":"LEY:3035-08",
+     "nombre_norma":"LEY N. 3035",
+     "titulo_resumido":"CREACION DEL CONSEJO PROVINCIAL DEL MEDIO AMBIENTE (COPROMA)",
+     "titulo_sumario":"DERECHO AMBIENTAL-MEDIO AMBIENTE-POLITICA AMBIENTAL-SECRETARIA DE MEDIO AMBIENTE-CONSEJO PROVINCIAL DEL MEDIO AMBIENTE:CREACION",
+     "texto_actualzado":"www.saij.gob.ar/LPZ0003035"
+   },
+   {
+     "provincia":"SANTA CRUZ",
+     "tipo_norma":"LEY",
+     "estado":"Vigente",
+     "id":"LEY:2714-04",
+     "nombre_norma":"LEY N. 2714",
+     "titulo_resumido":"ADHESION AL CONSEJO FEDERAL DE MEDIO AMBIENTE",
+     "titulo_sumario":"DERECHO AMBIENTAL-MEDIO AMBIENTE-POLITICA AMBIENTAL-CONSEJO FEDERAL DE MEDIO AMBIENTE-ADHESION PROVINCIAL-LEY NACIONAL",
+     "texto_actualzado":"www.saij.gob.ar/LPZ0002714"
+   },
+   {
+     "provincia":"SANTA CRUZ",
+     "tipo_norma":"LEY",
+     "estado":"Vigente",
+     "id":"LEY:2613-02",
+     "nombre_norma":"LEY N. 2613",
+     "titulo_resumido":"CONVENIO EN EL MARCO DEL 'PROYECTO DE GESTION DE LA CONTAMINACION 'ENTRE MINISTERIO DE DESARROLLO SOCIAL Y MEDIO AMBIENTE DE LA NACION Y EL GOBIERNO DE LA PROVINCIA DE SANTA CRUZ",
+     "titulo_sumario":"DERECHO AMBIENTAL-CONVENIOS CON LA NACION-CONTAMINACION AMBIENTAL",
+     "texto_actualzado":"www.saij.gob.ar/LPZ0002613"
+   },
+   {
+     "provincia":"SANTA CRUZ",
+     "tipo_norma":"LEY",
+     "estado":"Individual, Solo Modificatoria o Sin Eficacia",
+     "id":"LEY:1890-87",
+     "nombre_norma":"LEY N. 1890",
+     "titulo_resumido":"DECLARA DE INTERÉS PROVINCIAL A LAS I JORNADAS NACIONALES SOBRE LOS RECURSOS HIDRICOS EN LAS ZONAS ARIDAS Y SEMIARIDAS Y SU RELACION CON EL MEDIO AMBIENTE Y EL HOMBRE",
+     "titulo_sumario":"DERECHO AMBIENTAL-MEDIO AMBIENTE-RECURSOS HIDRICOS-I JORNADAS NACIONALES SOBRE LOS RECURSOS HIDRICOS EN LAS ZONAS ARIDAS Y SEMIARIDAS Y SU RELACION CON EL MEDIO AMBIENTE Y EL HOMBRE- DECLARA DE INTERES PROVINCIAL",
+     "texto_actualzado":"www.saij.gob.ar/LPZ0001890"
+   },
+   {
+     "provincia":"SANTA CRUZ",
+     "tipo_norma":"LEY",
+     "estado":"Individual, Solo Modificatoria o Sin Eficacia",
+     "id":"LEY:1577-83",
+     "nombre_norma":"LEY N. 1577",
+     "titulo_resumido":"RATIFICACIÓN DE CONVENIO ENTRE LA NACIÓN Y LA PROVINCIA PARA EL MEJORAMIENTO DEL MEDIO AMBIENTE Y CALIDAD DE VIDA DE LA POBLACIÓN",
+     "titulo_sumario":"CONVENIOS CON LA NACION-MEDIO AMBIENTE-POLITICA AMBIENTAL-PROTECCION DEL MEDIO AMBIENTE-IMPACTO AMBIENTAL",
+     "texto_actualzado":"www.saij.gob.ar/LPZ0001577"
+   },
+   {
+     "provincia":"SANTIAGO DEL ESTERO",
+     "tipo_norma":"LEY",
+     "estado":"Vigente",
+     "id":"LEY:6783-06",
+     "nombre_norma":"LEY 6.783",
+     "titulo_resumido":"MEDIO AMBIENTE",
+     "titulo_sumario":"PROGRAMA DE OZONO-OBJETIVOS-ADHESION",
+     "texto_actualzado":"www.saij.gob.ar/LPG0006783"
+   },
+   {
+     "provincia":"SANTIAGO DEL ESTERO",
+     "tipo_norma":"LEY",
+     "estado":"Vigente",
+     "id":"LEY:6536-01",
+     "nombre_norma":"LEY 6.536",
+     "titulo_resumido":"CREACION DE SUBSECRETARIAS DE DESARROLLO CAPRINO Y DE DESARROLLO APICOLA EN EL AMBITO DEL MINISTERIO DE LA PRODUCCION Y MEDIO AMBIENTE-RATIFICACION DEL DECRETO QUE CREA LA SECRETARIA DE LA PRODUCCION Y MEDIO AMBIENTE (SERIE 'A' N§ 600 DEL 12-5-98)",
+     "titulo_sumario":"RATIFICA DECRETO DE CREACION DE LA SECRETARIA DE LA PRODUCCION Y MEDIO AMBIENTE-CREACION DE SUBSECRETARIAS DE DESARROLLO CAPRINO Y DE DESARROLLO APICOLA-DEPARTAMENTOS-FUNCIONES-FACULTADES DEL PODER EJECUTIVO-COMPETENCIA DEL MINISTERIO DE GOBIERNO",
+     "texto_actualzado":"www.saij.gob.ar/LPG0006536"
+   },
+   {
+     "provincia":"SANTIAGO DEL ESTERO",
+     "tipo_norma":"LEY",
+     "estado":"Individual, Solo Modificatoria o Sin Eficacia",
+     "id":"LEY:6363-97",
+     "nombre_norma":"LEY PROVINCIAL 6.363.",
+     "titulo_resumido":"OBLIGATORIEDAD DEL DICTADO DE CLASES SOBRE ECOLOGIA Y MEDIO AMBIENTE.",
+     "titulo_sumario":"OBJETO CUMPLIDO-ESTABLECE OBLIGATORIEDAD DEL DICTADO DE CLASES ALUSIVAS SOBRE ECOLOGIA Y MEDIO AMBIENTE EN LOS ESTABLECIMIENTOS ESCOLARES DE LA PROVINCIA EL 5 DE JUNIO DE CADA AÑO.",
+     "texto_actualzado":"www.saij.gob.ar/LPG0006363"
+   },
+   {
+     "provincia":"SANTIAGO DEL ESTERO",
+     "tipo_norma":"LEY",
+     "estado":"Individual, Solo Modificatoria o Sin Eficacia",
+     "id":"LEY:5840-91",
+     "nombre_norma":"LEY PROVINCIAL N. 5.840",
+     "titulo_resumido":"INCLUSION DE ASIGNATURAS ECOLOGIA Y MEDIO AMBIENTE EN ESCUELAS DE NIVEL MEDIO.",
+     "titulo_sumario":"OBJETO CUMPLIDO-INCLUSION DE ASIGNATURAS ECOLOGIA Y MEDIO AMBIENTE EN ESCUELAS DE NIVEL MEDIO.",
+     "texto_actualzado":"www.saij.gob.ar/LPG0005840"
+   },
+   {
+     "provincia":"SANTIAGO DEL ESTERO",
+     "tipo_norma":"LEY",
+     "estado":"Individual, Solo Modificatoria o Sin Eficacia",
+     "id":"LEY:5307-83",
+     "nombre_norma":"LEY PROVINCIAL N. 5307",
+     "titulo_resumido":"RATIFICA CONVENIO ENTRE EL MINISTERIO DE SALUD PUBLICA Y MEDIO AMBIENTE DE LA NACION Y LA PROVINCIA DE SANTIAGO DEL ESTERO.",
+     "titulo_sumario":"RATIFICA CONVENIO ENTRE EL MINISTERIO DE SALUD PUBLICA Y MEDIO AMBIENTE DE LA NACION Y LA PROVINCIA, MEDIANTE EL CUAL SE TRANSFIERE FRACCIONES DE TERRENO UBICADAS EN AVDA. BELGRANO SUR 2050.",
+     "texto_actualzado":"www.saij.gob.ar/LPG0005307"
+   },
+]
