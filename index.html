@@ -22,8 +22,7 @@
 
 	<!-- SCRIPTS -->
 	<!-- DB -->
-	<script type="text/javascript" src="matleg-nacional.json"></script>
-	<script type="text/javascript" src="matleg-provincia.json"></script>
+	<!--script type="text/javascript" src="db/matleg.json"></script-->
 
 </head>
 
@@ -41,7 +40,7 @@
       </button>
 		<form id="popup1" class="overlay form">
 		<a class="close" href="#">&times;</a>
-		  <h2>CONTACTANOS</h2>
+		  <h3>CONTACTANOS</h3>
 		  Para sugerir nuevos compuestos y  cambios, reportar bugs o contribuír al proyecto.
 		  <p type="Nombre:"><input placeholder="Tu nombre.."></input></p>
 		  <p type="Email:"><input placeholder="Dejá tu mail así te respondemos.."></input></p>
@@ -66,29 +65,31 @@
 
 		<!-- Buscador + Toolbar -->
 		<div class="search_toolbar">
-		<!-- <form id="myForm"> 	 -->
 			<i class="fa fa-search search_icon" aria-hidden="true"></i>
 			<input class="search_input" type="text" name="" placeholder="Buscar...">
+		<!-- (x) limpiar buscador -->
 			<i class="fas fa-times search_close search_icon" onclick="$('.search_input').val(' ');$('li.grid-card').show()"></i>
-		<!-- </form> -->
-			&nbsp; Filtros: &nbsp;
+		<!-- filtros desplegables -->	
+		<span style="color:var(--gris-medio);padding:10px;">Filtros:</span>
 			<div class="filtro">
-			  <select>
-			    <option value="0">Tipo de norma:	</option>
-			    <option value="1">Ley		</option>
-			    <option value="2">Decreto		</option>
-			    <option value="3">Resolución	</option>
+			  <select id="filtro-tipo-norma">
+			    <option value=" ">Tipo de norma:	</option>
+			    <option value="LEY">Ley		</option>
+			    <option value="DEC">Decreto		</option>
+			    <option value="RES">Resolución	</option>
 			  </select>
 			</div>
 			<div class="filtro">
-			<select>
-			  <option value="0">Jurisdicción:	</option>
-			  <option value="1">Nación		</option>
-			  <option value="2">Buenos Aires	</option>
-			  <option value="3">CABA		</option>
+			<select id="filtro-provincia">
+			  <option value=" ">Jurisdicción:	</option>
 			</select>
 			</div>
-
+		<!-- range slider -->
+			<span style="color:var(--gris-medio);padding:10px;">Desde:</span>
+		<div class="slidecontainer">
+		  <input type="range" name="foo" min="1996" max="2020" value="1996" class="range-slider" id="range-slider">
+			 <span id="range-slider-number"></span>
+		</div>
 
 		</div>
 
@@ -102,46 +103,99 @@
 		</grid>
 
 <script>
-$(document).ready(function () {
+	
+	
+//forma correcta de levantar el json
+$.getJSON('db/matleg.json', function(jd) {
+	data=jd;
 
-        //BUSCADOR / FILTRO
-        $(".search_input").on("keyup", function () {
-                $("body").scrollTop(0);
-                $(".search_close").show();
-
-                //filtrar:
-                var value = $(this).val().toLowerCase();
-                $(".grid-cards li").filter(function () {
-                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                });
-
-                //mostrar numero de compuestos
-                n = $("li.grid-card").length - $("li.grid-card").filter(":hidden").length;
-                $(".counter-show").empty(); $(".counter-show").append(n)
-                $(".counter-total").empty(); $(".counter-total").append(linker.length)
-        });
-
-	//ARMADO DE CARTAS DE COMPUESTOS:
+	//ARMADO DE LISTA DE NORMATIVAS:
         var item_content = " ";
-        for (i = 0; i < nacional.length; i++) {
+	
+	console.log(data.length);
+        for (i = 0; i < data.length; i++) {
                 try {
+			yr=data[i].id.substr(data[i].id.length-4,4);
+			tipo=data[i].tipo;
+			provincia=data[i].provincia;
+
                 item_content += `
-                <li class='grid-card'>
+                <li class='grid-card' yr='`+yr+`' tipo='`+tipo+`' provincia='`+provincia+`'>
                                 <div class='card-header'>
-                                        <h2 class='card-subtitulo'>`+nacional[i].tipo_norma+` `+ nacional[i].id +`</h2>
-                                        <h1 class='card-titulo'>`+ nacional[i].titulo_resumido +`</h1>
+                                        <h2 class='card-subtitulo' name='`+data[i].tipo+`'>`+data[i].tipo+` `+ data[i].id +`</h2>
+                                        <h2 class='card-subtitulo' name='`+data[i].provincia+`'>`+data[i].provincia+`</h2>
+                                        <h1 class='card-titulo'>`+ data[i].titulo +`</h1>
                                 </div>
                                 <div class='card-content'>
-                                       `+ nacional[i].texto_resumido +`
+                                       `+ data[i].texto+`
                                 </div>
                                 <div  class='card-footer'>
-                                        <a href='`+ nacional[i].texto_original +`'>ver norma</a>
+                                        <a href='`+ data[i].link +`'>link</a>
                                 </div>
                  </li>`;
                 } catch (error) { console.error(error); continue; }
         };
         $(".grid-cards").append(item_content);
+
+
+	//range slider numero
+	$("#range-slider").on("input", function() {
+		valor=$("#range-slider").val();
+		$("#range-slider-number").empty().append(valor);
+	});
+
+	/*opciones filtro provincia */
+	var a=[];
+	$.each(data,function(){a.push(this.provincia.toUpperCase())});
+	var unique = a.filter(function(itm, i, a) {
+	    return i == a.indexOf(itm);
+	});
+	for (i=0;i< unique.length;i++){
+		$("#filtro-provincia").append('<option value="'+unique[i]+'">'+unique[i]+'</option>')
+	}
+
+
 });
+
+
+
+$(document).ready(function(){
+	//BUSCADOR / FILTRO
+	$(".search_input").on("keyup",      function () { filtrar(); });
+	$("#filtro-tipo-norma").on("input", function () { filtrar(); });
+	$("#filtro-provincia").on("input",  function () { filtrar(); });
+	$("#range-slider").on("input",      function () { filtrar(); });
+
+
+
+	function filtrar(){                                                                      
+	        //filtrar:
+	        var value = $(".search_input").val().toLowerCase();
+		var yr=$("#range-slider").val();
+		var tipo=$("#filtro-tipo-norma").val();
+		var provincia=$("#filtro-provincia").val();
+
+	        $(".grid-cards li").filter(function () {
+			ids=$(this).text().toLowerCase().indexOf(value) > -1 && $(this).attr("tipo") == tipo && $(this).attr("provincia")==provincia && $(this).attr("yr") > yr
+	                $(this).toggle(ids)
+	        });
+	
+
+		//mostrar icono de borrar cuando hay texto
+	        $(".search_close").show();
+		//desaparecen icono de borrar cuando no hay texto
+		if ( value == ""){$(".search_close").hide();}
+	                                                                                     
+	        //mostrar numero de compuestos
+	        //n = $("li.grid-card").length - $("li.grid-card").filter(":hidden").length;
+	        //$(".counter-show").empty(); $(".counter-show").append(n)
+	        //$(".counter-total").empty(); $(".counter-total").append(linker.length)
+	};
+
+
+
+});
+
 </script>
 	</main>
 
@@ -163,7 +217,7 @@ $(document).ready(function () {
 						<p>Para contribuir visite:  
 						<a href="https://github.com/gauss-ma/matleg/">github.com/gauss-ma/matleg</a></p>
 					</div>
-					<a class="github" href="#"><i class="fa fa-4x fa-github"></i></a>
+					<a class="github" href="#"><i class="fa fa-3x fa-github"></i></a>
 				</div>
 			</div>
 	</footer>

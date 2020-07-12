@@ -390,18 +390,22 @@ box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
 }
 
 .search_close{
+	position:relative;
 	color: var(--gris-medio);
-cursor: pointer;
+	cursor: pointer;
 	display:none;
-		  transform: translateX(-45px);
+		  /*transform: translateX(-45px);*/
+	right:45px;
 }
 
 .search_close:hover{
 	color: var(--celeste-oscuro);
 }
 
+
+/*buscador*/
 .search_input{
-width:30%;
+width:25%;
 height:100%;
 border-style:none;
 background-color:transparent;
@@ -419,30 +423,10 @@ font-weight: 400;
 	border-right: 1px solid var(--gris-medio);
 }
 
-.top_fixed-search_toolbar{
-   	display:flex;
-	margin: 0 auto;
-	padding-left:60px;
-	padding-right: calc(0% + 60px);
-	position: fixed!important;
-	top:0;
-	left:0;
-	z-index: 30;
-	-moz-box-shadow: 0 4px 4px rgba(0,0,0,.06);
-	box-shadow: 0 4px 4px rgba(0,0,0,.06);
-	width: 100%;
-	/* max-width:1500px; */
-	height:54px;
-	border-radius: 0px;
-	/* border: 1px solid var(--gris-oscuro); */
-	align-items: center;
-}
-
-.top_fixed-search_toolbar > .search_input{
-	width:40%;
-}
 
 
+
+/*filtros desplegables*/
 
 .filtro{
 	height:100%;
@@ -481,11 +465,55 @@ pointer-events: none;
 }
 
 
+
+/*range slider años */
+
+input[type=range] {
+	-webkit-appearance: none;
+        appearance: none;
+	height:2px;
+	background-color:var(--gris-medio);
+}
+
+input[type=range]:focus::-moz-range-track,
+input[type=range]:focus::-moz-range-thumb,
+input[type=range]:focus{
+	background-color:var(--celeste-claro);
+}
+
+/*input[type=range]::-webkit-slider-thumb ,
+input[type=range]::-ms-thumb{*/
+input[type=range]::-moz-range-thumb{
+  -webkit-appearance: none;
+	appearance:none;
+	height:8px;width:8px;
+	background-color:var(--gris-claro);
+	border: 2px solid var(--gris-medio);
+}
+
+input[type=range]:focus::-moz-range-track{
+	outline:0!important;
+	border:0!important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*      TARJETAS         */
 .grid-container{
 	padding-top:10px;
    width:100%;
    max-width:1500px;
+	min-height:15vh;
 	display:block;
 }
 
@@ -582,9 +610,6 @@ align-items: center;*/
   justify-content: center;
   display:flex-inline; 
   padding:60px;
-  
-  
-  
 }
 
 .site-footer-wrapper{
@@ -623,7 +648,7 @@ margin: auto;
 .footer-links a:active,.footer-links a:focus,.footer-links a:hover
 {  color:var(--celeste-oscuro);  text-decoration:none;}
 .footer-links.inline li{  display:inline-block}
-a.github >i{	color: var(--gris-claro);}
+a.github >i{color: var(--gris-claro);margin-top:10px;}
 a.github:hover >i{  color:inherit;}
 
 
@@ -663,12 +688,7 @@ a.github:hover >i{  color:inherit;}
 
 
 
-/*Ripple */
-.animation{
-  animation:ripple .65s linear;
-}
 
-/* Pantalla angosta */
 
 
 
@@ -707,111 +727,6 @@ a.github:hover >i{  color:inherit;}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#NFPA_fig,
-#SeguridadQuimica_figs{
-	display:flex; 
-	flex-direction:row;
-	padding:10px;
-	height:100px;
-	width:80%;
-	max-width:700px;
-
-}
-#NFPA_fig figure,
-#SeguridadQuimica_figs figure{
-	width:100px;
-}
-
-
-#ToxicList tr{display:none;}
-#showLess,
-#loadMore,.loadmore{
-          	background:#fff;
-        	color:var(--gris-medio);
-            		opacity:0.8;
-border-radius: 20px;
-border: 1px solid#dadce0;
-color:rgba(0,0,0,.87);
-display: inline-flex;
-font-family: "Roboto,Helvetica Neue",sans-serif;
-font-weight: 500;
-line-height: 32px;
-min-height: 32px;
-padding-left: 16px;
-padding-right: 21px;
-text-transform: none;
-margin: 0 10px 0 0;
-margin-top:10px;
-overflow: hidden;
-transition: all 0.2s;
-box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
-/* opacity: 0.5; */
-/* background: none !important; */
-/* color: #202020 !important; */
-cursor: pointer;
-
-}
-        
-#showLess:hover,
-#loadMore:hover,
-.loadmore:hover{
-        	opacity:1;
-		color:var(--celeste-oscuro);
-		  /* border: 2px solid var(--); */
-		  transform: translateY(-2px);
-		  box-shadow: 0 3px 6px 0 rgba(0,0,0,.26);
-} 
-
-/*#showLess::before,
-#loadMore::after{
-color: var(--celeste-oscuro);
-display: block;
-content: "▼";
-position: relative;
-speak: none;
-font-size: 13px;
-transform: scaleY(0.5) scaleX(1);
-top: 1px;
-right: -7px;
-}
-
-
-
-#showLess::before{
-	left:-7px;
-    transform: scaleY(0.5) scaleX(1) rotate(180deg) translateY(3px);
-}
-*/
 
 
 
@@ -857,9 +772,8 @@ visibility:hidden;
   color: var(--celeste-oscuro);
 }
 
-.form h2{
+.form h3{
 	padding-bottom:5px;
-	font-weight: 800;
 	font-family:'Montserrat';
 	margin:10px 0;
 	border-bottom:2px solid var(--gris-oscuro);
@@ -887,137 +801,6 @@ span{margin:0 5px 0 15px}
   visibility: visible;
   opacity: 0.98;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* VISUALIZACION DE MOLECULA 3D */
-#MolView2D-container,
-#MolView-container{
-	display:flex;
-	flex-direction:row;
-	position:relative;
-	margin-top:10px;
-	margin-right:10px;
-	border: 1px solid var(--gris-medio);
-}
-
-#MolView2D-botones,
-#MolView-botones{
-	display:flex;
-	flex-direction:column;
-	width:50px;
-}
-#MolView-botones>button{
-	padding:5px;
-	background:#fff;
-	box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
-}
-#MolView-botones>button:hover{
-  transition-property: background-color,box-shadow,transform;
-  transition: box-shadow .3s cubic-bezier(0.55, 0, 0.55, 0.2);
-	background:var(--blanco);
-
-}
-#MolView-botones>button:disabled,
-#MolView-botones>button:disabled:hover{
-	background:var(--gris-claro);
-	box-shadow: 0 0px 0px 0 rgba(0,0,0,.0);
-}
-
-#MolView2D-botones>h3,
-#MolView-botones>h3{
-	font-weight:500;
-	margin-left:10px;
-	margin-bottom:5px;
-}
-
-#MolView2D,
-#MolView{
-	background:white;
-	display:flex;
-	flex-direction:column;
-	border: 1px dotted var(--gris-medio);
-
-}
-
-
-
-
-#sinonimos ol{
-	display:grid;  
-	grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px 10px;
-}
-
-#sinonimos ol >li{
-	padding:2px;
-}
-/*#sinonimos ol > li:before{content:", "}
-#sinonimos ol > li:first-child::before {content:" "}
-*/
-
-
-/* 
-#descripcion {
-	font-size:16px;
-	line-height:16px;
-
-} */
-
-
-#descripcion{
-	color: var(--gris-oscuro);
-	/* font-family: 'RobotoRegular, Roboto'!important; */
-	font-weight: 400!important;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased !important;
-	-moz-font-smoothing: antialiased !important;
-	text-rendering: optimizelegibility !important;
-	letter-spacing: .03em;
-	font-size: 18px;
-    line-height: 1.5em;
-    /* padding: 0 0 1em 0; */
-	text-align: justify;
-	max-width: 700px;
-	/* para el "ver mas" */
-	display: -webkit-box;
-    
-    -webkit-box-orient: vertical;  
-    overflow: hidden;
-}
-
-.clamped{
-	-webkit-line-clamp: 4;
-
-}
-
-.unclamped{
-	-webkit-line-clamp: unset;
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
