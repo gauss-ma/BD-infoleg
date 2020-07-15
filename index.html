@@ -28,16 +28,16 @@
 
 
 <body>
-	<button class="fixed-button scroll-up" onclick="scrollUp(0)" type="button">
+	<!-- button class="fixed-button scroll-up" onclick="scrollUp(0)" type="button">
 		<i class="fa fa-arrow-up" aria-hidden="true"></i>
-	</button>
+	</button -->
 
 	<button type="button" id="feedback-button" onclick="Feedback()" title="Feedback" aria-label="Feedback">
-        <a href="#popup1"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
-          <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-4h-2V6h2v4z"></path>
-        </svg>
-	</a>
-      </button>
+          <a href="#popup1"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
+            <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-4h-2V6h2v4z"></path>
+          </svg>
+	  </a>
+        </button>
 		<form id="popup1" class="overlay form">
 		<a class="close" href="#">&times;</a>
 		  <h3>CONTACTANOS</h3>
@@ -46,15 +46,8 @@
 		  <p type="Email:"><input placeholder="Dejá tu mail así te respondemos.."></input></p>
 		  <p type="Mensaje:"><input placeholder="Dejanos tu mensaje aquí.."></input></p>
 		  <button>Enviar</button>
-		  <!-- div>
-		    <!-- span class="fa fa-phone"></span>001 1023 567 -->
-		    <!--span class="fa fa-envelope-o"></span> contacto@gauss-ma.com.ar-->
-		  </div -->
 		</form>
-		</div>
       
-
-
 	<header>
 		<div class="LogoToxDB" onclick="restart();">[m]<span>leg</span>	</div>
         	<a class="Logo_gauss" href="https://www.gauss-ma.com.ar" ><img src="img/icon-gauss.png"></img> &nbsp;gauss </a>
@@ -67,29 +60,29 @@
 		<div class="search_toolbar">
 			<i class="fa fa-search search_icon" aria-hidden="true"></i>
 			<input class="search_input" type="text" name="" placeholder="Buscar...">
-		<!-- (x) limpiar buscador -->
+			<!-- (x) limpiar buscador -->
 			<i class="fas fa-times search_close search_icon" onclick="$('.search_input').val(' ');$('li.grid-card').show()"></i>
-		<!-- filtros desplegables -->	
-		<span style="color:var(--gris-medio);padding:10px;">Filtros:</span>
+			<!-- filtros desplegables -->	
+			<span style="color:var(--gris-medio);padding:10px;">Filtros:</span>
+			<!-- div class="filtro">
+			  	<select id="filtro-tipo-norma">
+			  	  <option value="">Tipo de norma:	</option>
+			  	  <option value="LEY">Ley		</option>
+			  	  <option value="DEC">Decreto		</option>
+			  	  <option value="RES">Resolución	</option>
+			  	</select>
+			</div-->
 			<div class="filtro">
-			  <select id="filtro-tipo-norma">
-			    <option value=" ">Tipo de norma:	</option>
-			    <option value="LEY">Ley		</option>
-			    <option value="DEC">Decreto		</option>
-			    <option value="RES">Resolución	</option>
-			  </select>
+				<select id="filtro-provincia">
+			  		<option value="">Jurisdicción:	</option>
+				</select>
 			</div>
-			<div class="filtro">
-			<select id="filtro-provincia">
-			  <option value=" ">Jurisdicción:	</option>
-			</select>
-			</div>
-		<!-- range slider -->
+			<!-- range slider -->
 			<span style="color:var(--gris-medio);padding:10px;">Desde:</span>
-		<div class="slidecontainer">
-		  <input type="range" name="foo" min="1996" max="2020" value="1996" class="range-slider" id="range-slider">
-			 <span id="range-slider-number"></span>
-		</div>
+			<div class="slidecontainer">
+		  		<input type="range" name="foo" min="1810" max="2020" value="1996" class="range-slider" id="range-slider">
+			 	<span id="range-slider-number"></span>
+			</div>
 
 		</div>
 
@@ -130,7 +123,7 @@ $.getJSON('db/matleg.json', function(jd) {
                                        `+ data[i].texto+`
                                 </div>
                                 <div  class='card-footer'>
-                                        <a href='`+ data[i].link +`'>link</a>
+                                        <a href='`+ data[i].link +`'><i class="fa fa-external-link" aria-hidden="true"></i></a>
                                 </div>
                  </li>`;
                 } catch (error) { console.error(error); continue; }
@@ -170,13 +163,22 @@ $(document).ready(function(){
 
 	function filtrar(){                                                                      
 	        //filtrar:
-	        var value = $(".search_input").val().toLowerCase();
-		var yr=$("#range-slider").val();
-		var tipo=$("#filtro-tipo-norma").val();
+	        var value = $(".search_input").val().toLowerCase().split(" ");
 		var provincia=$("#filtro-provincia").val();
+		var yr=$("#range-slider").val();
+		//var tipo=$("#filtro-tipo-norma").val();
 
 	        $(".grid-cards li").filter(function () {
-			ids=$(this).text().toLowerCase().indexOf(value) > -1 && $(this).attr("tipo") == tipo && $(this).attr("provincia")==provincia && $(this).attr("yr") > yr
+			ids=$(this).text().toLowerCase().includes(" ")
+			ids=ids && $(this).attr("provincia")==provincia 
+			//ids=ids && $(this).attr("tipo") == tipo 
+                        ids=ids && $(this).attr("yr") > yr
+			for (word in value){
+				//ids=$(this).text().toLowerCase().indexOf(value) > -1 
+				ids=ids && $(this).text().toLowerCase().includes(value[word])
+			}
+			
+			
 	                $(this).toggle(ids)
 	        });
 	
@@ -185,11 +187,6 @@ $(document).ready(function(){
 	        $(".search_close").show();
 		//desaparecen icono de borrar cuando no hay texto
 		if ( value == ""){$(".search_close").hide();}
-	                                                                                     
-	        //mostrar numero de compuestos
-	        //n = $("li.grid-card").length - $("li.grid-card").filter(":hidden").length;
-	        //$(".counter-show").empty(); $(".counter-show").append(n)
-	        //$(".counter-total").empty(); $(".counter-total").append(linker.length)
 	};
 
 

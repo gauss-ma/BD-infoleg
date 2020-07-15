@@ -10,13 +10,15 @@ echo $1
 
 if [[ $1 == "descarga" || $1 == "-descarga" || $1 == "--descarga" ]]
 then
+	if [ ! -d provincial/ ];	then mkdir provincial;fi;
+        if [ ! -d nacional/   ];	then mkdir nacional  ;fi;
 
 	echo -e "\e[32mDescargando archivos..\e[0m"
 	infoleg="http://datos.jus.gob.ar/dataset/base-de-datos-legislativos-infoleg"
 	saij="http://datos.jus.gob.ar/dataset/base-saij-de-normativa-provincial"
 	
-	files_infoleg=($(curl -silent ${infoleg}  | grep -Eoi '<a [^>]+>' ${1} | grep -Eo 'href="[^\"]+"' |  grep -Eo '(http|https)://.*.zip'))
-	files_saij=($(curl -silent ${saij}  | grep -Eoi '<a [^>]+>' ${1} | grep -Eo 'href="[^\"]+"' |  grep -Eo '(http|https)://.*.csv'))
+	files_infoleg=($(curl -silent ${infoleg}  | grep -Eoi '<a [^>]+>'| grep -Eo 'href="[^\"]+"' |  grep -Eo '(http|https)://.*.zip'))
+	files_saij=($(curl -silent ${saij}  | grep -Eoi '<a [^>]+>' | grep -Eo 'href="[^\"]+"' |  grep -Eo '(http|https)://.*.csv'))
 
 
 	for file in ${files_infoleg[@]}
@@ -45,7 +47,6 @@ fi;
 ## F I L T R A D O  ---------------------------------------------------------------#
 if [[ $1 == "database" || $1 == "-database" || $1 == "--database" ]]
 then
-
 #------------------------------------------------------------------------
 #(Nacional):
 #1 id_norma		#6 fecha_sancion	#11 titulo_sumario  	#16 modificada_por
@@ -59,20 +60,24 @@ then
 
 cat nacional/base-infoleg-normativa-nacional.csv | awk -F "\",\"" '
 	 BEGIN{printf "[\n" }
-	$2 ~ /(Ley|Resolución|Decreto)/ && \
-	$5 !~ /(ECONOM|EDUCA|EMPLEO|TURISMO|PENAL|TRANSPORTE|COMERCIO|FINANZAS|GENERO|COMUNICACIONES|AVIACION|DIGITAL|SEGURIDAD|CENSO|ALIMENTOS|JUSTICIA|DISCAPACIDAD|HOSPITAL|ANTICORRUPCION|TESORO|COMUNICACION|ADMINISTRATIVA|TASACIONES|CULTURA|DEFENZA|ARSENAL|MILITAR|MUSICA|TEATRO|ARTE|MAGISTRATURA|JUBILACIONES|AFIP)/ && \
-	$10 !~ /(CONTRATACION|DESIGNACION|RENUNCIA|CREACION|GASTO|COMPRA|FONDO|PREMIO|SINTETIZ|DENOMINAC|NOMBRAMIENTO|RECOMENDACION)/ &&\
-	$12 ~ /((CONTAMIN|PROTECCION|CUIDADO|CONSERVA|RECURSO).(AGUA|AIRE|HIDR|SUELO|ATMOSF|AMBIENT|BOSQUE|NATURAL)|(DESECHO|VERTIDO|VUELCO|RESIDU|EMISION|GESTION).(GAS|LIQ|AGUA|AQU|EFLU|ATMOSF|HIDR|RIOS|LAGOS|SUELO|NATURA|PATOLOG|PATOGEN)|(COMBUSTIBLE|HIDROCARBUROS)|(AGUA.CLOACAL))/{
-	      printf "   {\n"
-	      printf "     \"id\":\""          $3"/"substr($6,1,4)"\",\n"
-	      printf "     \"tipo\":\""toupper(substr($2,1,3))"\",\n"
-	      printf "     \"provincia\":\"NACION\",\n"
-	      printf "     \"tema\":\""        $11"\",\n"
-	      printf "     \"titulo\":\""      $10"\",\n"
-	      printf "     \"texto\":\""       $12"\",\n"
-	      printf "     \"link\":\""        $14"\" \n"
-	      printf "   },\n"
-	   }
+	$2  ~ /(Ley|Resolución|Decreto)/ && \
+	$5 !~ /(ECONOM|EDUCA|EMPLEO|TURISMO|PENAL|COMERCIO|FINANZAS|GENERO|COMUNICACIONES|AVIACION|DIGITAL|CENSO|ALIMENTOS|JUSTICIA|DISCAPACIDAD|HOSPITAL|ANTICORRUPCION|TESORO|COMUNICACION|ADMINISTRATIVA|TASACIONES|CULTURA|DEFENZA|ARSENAL|MILITAR|MUSICA|TEATRO|ARTE|MAGISTRATURA|JUBILACIONES|AFIP)/ &&\
+	$10 !~ /(CONTRATACION|DESIGNA|RENUNCIA|CREACION|GASTO|COMPRA|FONDO|PREMIO|SINTETIZ|DENOMINAC|NOMBRAMIENTO|RECOMENDACION|PAVIMENTACION|URBANIZACION|RECHAZ|DESESTIMA|DESCONSIDERACION|(LICITACION.PUBLICA)|SUSTITUYE|INTENDENTE|CONCURSO|(AUDIENCIA.PUBLICA)|RECTIFICACION|REENCACILLAMIENTO|(ASIGNACION.*FUNCIONES)|TESORO|LLAMADO|SALARI|CREDITO|EXPROPIAC|JORNADA|SIMPOSIO|(EVASION.FISCAL))/ &&\
+	($12 ~ /(DESECHO|VERTIDO|VUELCO|RESIDU|EMISION|GESTION|CONTAMIN|POLUCION|REMEDIA|PROTECCION|CUIDADO).*(AGUA|HIDR|ACU|AIRE|GAS|ATMOS|SUELO|GEO|GLACIA|SEDIMEN|RIO|LAGO|NATURA|PATOGEN|PATOLOG|CLOACA|AMBIENTE)/ ||\
+	$12 ~ /(RESERVA|PARQUE|CONSERVACION).*(NATURAL|ECOLO|AUTOCT|NACIONAL)/ ||\
+	$12 ~ /(MINER|EXPLOTACION|APROVECHAMIENTO).*(NATURAL|AMBIENT)/ ||\
+	$12 ~ /(EVALUACION).*(IMPACTO|RIESGO).AMBIENTAL/ ) \
+	{
+	 printf "   {\n";
+	 printf "     \"id\":\"%s/%4i\",\n",$3,substr($6,1,4);
+	 printf "     \"tipo\":\"%3s\",\n",toupper(substr($2,1,3));
+	 printf "     \"provincia\":\"NACION\",\n";
+	 printf "     \"tema\":\"%s\",\n",$11;
+	 printf "     \"titulo\":\"%s\",\n",$10;
+	 printf "     \"texto\":\"%s\",\n",$12;
+	 printf "     \"link\":\"%s\"\n", $14;
+	 printf "   },\n"
+	}
 	#END{printf "]\n"}
 	' > ../db/matleg.json
 
@@ -117,17 +122,20 @@ cat provincial/base-saij-normativa-provincial.csv | awk -F "\",\"" '
 	#BEGIN{printf "provincial=[\n" }
 	#$2 ~ /(DLE|DEC|LEY|RE.|NOR)/ && \
 	#$4 ~ /Vigente/ && \
-	$8 ~ /(MEDIO.AMBIENTE|(CONTAMIN|PROTECCION|RECURSO).(AGUA|AIRE|HIDR|SUELO|ATMOSF|AMBIENT)|(DESECHOS|VERTIDOS|VUELCO|RESIDU|EMISION).(GAS|LIQ|AQU|EFLU|ATMOSF|HIDR|RIOS|LAGOS|SUELO))/{
-	      printf "   {\n"
-	      printf "     \"id\":\""              $3"/"substr($6,1,4)"\",\n"
-	      printf "     \"tipo\":\""      	   $2"\",\n"
-	      printf "     \"provincia\":"         $1"\",\n"
-	      printf "     \"tema\":\""    	   $7 "\",\n"
-	      printf "     \"titulo\":\"" 	   $8"\",\n"
-	      printf "     \"texto\":\""  	   $9"\",\n"
-	      printf "     \"link\":\""		   $11"\"\n"
+	($9 ~ /(RECURSO|DESECHO|VERTIDO|VUELCO|RESIDU|EMISION|GESTION|CONTAMIN|REMEDIA|PROTECCION|CUIDADO).*(AGUA|HIDR|ACU|AIRE|GAS|ATMOS|SUELO|GEO|SEDIMEN|RIO|LAGO|NATURA|PATOGEN|PATOLOG|CLOACA)/ ||\
+	$9 ~ /(RESERVA|PARQUE|CONSERVACION).*(NATURAL|NACIONAL)/ ||\
+	$9 ~ /(EVALUACION).*(IMPACTO|RIESGO).AMBIENTAL/ ) \
+	 {
+		printf "   {\n";
+		printf "     \"id\":\"%s/%4i\",\n",$3,substr($6,1,4);
+		printf "     \"tipo\":\"%3s\",\n",toupper($2);
+		printf "     \"provincia\":%s\",\n",$1;
+		printf "     \"tema\":\"%s\",\n",$7;
+		printf "     \"titulo\":\"%s\",\n",$8;
+		printf "     \"texto\":\"%s\",\n",$9;
+		printf "     \"link\":\"%s\"\n", $11;
 	      printf "   },\n"
-	   }
+	 }
 	 END{printf "]\n"}
 	' >> ../db/matleg.json
 
@@ -149,9 +157,4 @@ fi;
 #AYSA
 #------------------------------------------------------------------------
 #ACUMAR
-
-
-
-## P A R S E O --------------------------------------------------------------------#
-#awk -F "\"*,\"*" '{print $5}' nacional/base-infoleg-normativa-nacional.csv | sort | uniq | grep "AMBIENTE"
 
